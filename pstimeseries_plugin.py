@@ -114,7 +114,7 @@ class PSTimeSeries_Plugin:
 		x, y = [], []	# lists containg x,y values
 		infoFields = {}	# hold the index->name of the fields containing info to be displayed
 
-		ps_source = ps_layer.source()
+		ps_source = ps_layer.source().split('|')[0]
 		ps_fields = ps_layer.dataProvider().fields()
 
 		providerType = ps_layer.providerType()
